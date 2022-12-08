@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/scp/arm_app/arm_ws/devel/setup.sh
