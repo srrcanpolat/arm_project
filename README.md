@@ -13,7 +13,7 @@ At the end of this project, it is aimed to control a robot arm simulated on Gaze
 
 ### What to do next:
 - Set up MoveIt and control the robot arm through it.
-- Develop a web interface and connect to ROS using roslibjs and rosbridge.
+- Develop a web interface and connect to ROS using roslibjs[^3] and rosbridge[^4].
 
 ## Installation Steps
 
@@ -105,3 +105,5 @@ rostopic list
 
 [^1]: [3D model .step file](https://thangs.com/designer/spectrum.thebestone/3d-model/Robotic%20Arm%203D%20Model-237722) by [spectrum.thebestone](https://thangs.com/designer/spectrum.thebestone)
 [^2]: [fusion2urdf repository](https://github.com/syuntoku14/fusion2urdf) by [syuntoku14](https://github.com/syuntoku14)
+[^3]:[roslibjs](https://github.com/RobotWebTools/roslibjs) by [RobotWebTools](https://github.com/RobotWebTools)
+[^4]:[rosbridge_suite](https://github.com/RobotWebTools/rosbridge_suite) by [RobotWebTools](https://github.com/RobotWebTools)
