@@ -50,7 +50,9 @@ sudo apt install ros-noetic-ros-control
 sudo apt install ros-noetic-ros-controllers
 ```
 <br>
+
 ---
+
 <br>
 
 For loading URDF to RViz
@@ -58,7 +60,9 @@ For loading URDF to RViz
 roslaunch robot_arm_description display.launch
 ```
 <br>
+
 ---
+
 <br><br>
 For loading URDF to Gazebo and control the arm joints
 
