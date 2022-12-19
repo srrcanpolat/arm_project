@@ -1,2 +1,2 @@
-
--DCATKIN_DEVEL_PREFIX=/home/scp/arm_app/arm_ws/devel -DCMAKE_INSTALL_PREFIX=/home/scp/arm_app/arm_ws/install -G Unix Makefiles
+robot_arm_description
+-DCATKIN_DEVEL_PREFIX=/home/scp/arm_project/arm_ws/devel -DCMAKE_INSTALL_PREFIX=/home/scp/arm_project/arm_ws/install -G Unix Makefiles

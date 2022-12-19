@@ -7,7 +7,6 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/scp/arm_app/arm_ws/devel:$CMAKE_PREFIX_PATH"
-export PWD='/home/scp/arm_app/arm_ws/build'
-export ROSLISP_PACKAGE_DIRECTORIES='/home/scp/arm_app/arm_ws/devel/share/common-lisp'
-export ROS_PACKAGE_PATH="/home/scp/arm_app/arm_ws/src:$ROS_PACKAGE_PATH"
+export LD_LIBRARY_PATH='/opt/ros/noetic/lib'
+export PWD='/home/scp/arm_project/arm_ws/build'
+export ROS_PACKAGE_PATH='/home/scp/arm_project/arm_ws/src:/opt/ros/noetic/share'
