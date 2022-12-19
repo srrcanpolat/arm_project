@@ -12,8 +12,8 @@ At the end of this project, it is aimed to control a robot arm simulated on Gaze
 - Tested the joint controls on Gazebo using ROS commands on terminal.
 
 ### What to do next:
-- Set up MoveIt and control the robot arm through it.
-- Develop a web interface and connect to ROS using roslibjs[^3] and rosbridge[^4].
+- Set up MoveIt[^3] and control the robot arm through it.
+- Develop a web interface and connect to ROS using roslibjs[^4] and rosbridge[^5].
 
 ## Installation Steps
 
@@ -105,5 +105,6 @@ rostopic list
 
 [^1]: [3D model .step file](https://thangs.com/designer/spectrum.thebestone/3d-model/Robotic%20Arm%203D%20Model-237722) by [spectrum.thebestone](https://thangs.com/designer/spectrum.thebestone)
 [^2]: [fusion2urdf repository](https://github.com/syuntoku14/fusion2urdf) by [syuntoku14](https://github.com/syuntoku14)
-[^3]:[roslibjs repository](https://github.com/RobotWebTools/roslibjs) by [RobotWebTools](https://github.com/RobotWebTools)
-[^4]:[rosbridge_suite repository](https://github.com/RobotWebTools/rosbridge_suite) by [RobotWebTools](https://github.com/RobotWebTools)
+[^3]: [MoveIt](https://moveit.ros.org/) by [PickNik Robotics](https://picknik.ai/?utm_source=moveit)
+[^4]: [roslibjs repository](https://github.com/RobotWebTools/roslibjs) by [RobotWebTools](https://github.com/RobotWebTools)
+[^5]: [rosbridge_suite repository](https://github.com/RobotWebTools/rosbridge_suite) by [RobotWebTools](https://github.com/RobotWebTools)
