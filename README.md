@@ -96,7 +96,7 @@ rostopic list
 | Joints        | Upper Limit   | Lower Limit  |
 | ------------- |:-------------:| :-----------:|
 | base_joint    | 1.57			| -1.57 	   |
-| waist_join    | 1.57			| -1.27 	   |
+| waist_joint   | 1.57			| -1.27 	   |
 | arm1_joint    | 1.57			| -1.57 	   |
 | arm2_joint    | 1.57			| -1.57 	   |
 | arm3_joint    | 1.57			| -1.57 	   |
