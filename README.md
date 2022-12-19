@@ -90,6 +90,7 @@ To get all joint topics
 ```shell script
 rostopic list
 ```
+---
 
 ### Joint Limits:
 | Joints        | Upper Limit   | Lower Limit  |
