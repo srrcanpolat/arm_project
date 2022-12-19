@@ -3,7 +3,7 @@ This project is a work in progress and made for "Robotic Programming with ROS" c
 
 At the end of this project, it is aimed to control a robot arm simulated on Gazebo with a web interface.
 
-#### What has been done so far:
+### What has been done so far:
 - A robotic arm model[^1] is simplified, and the necessary joints for the robot are defined according to fusion2urdf[^2] repository instructions.
 - Some corrections are made to the URDF files to be compatible with Gazebo.
 - A dummy joint is added between the robot arm base and Gazebo "world" to fix the arm to the world.
@@ -11,7 +11,7 @@ At the end of this project, it is aimed to control a robot arm simulated on Gaze
 - Loaded the URDF file to Gazebo without any error.
 - Tested the joint controls on Gazebo using ROS commands on terminal.
 
-#### What to do next:
+### What to do next:
 - Set up MoveIt and control the robot arm through it.
 - Develop a web interface and connect to ROS using roslibjs and rosbridge.
 
@@ -91,7 +91,7 @@ To get all joint topics
 rostopic list
 ```
 
-##### Joint Limits:
+### Joint Limits:
 | Joints        | Upper Limit   | Lower Limit  |
 | ------------- |:-------------:| :-----------:|
 | base_joint    | 1.57			| -1.57 	   |
