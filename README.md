@@ -53,6 +53,8 @@ Install ros control
 sudo apt install ros-noetic-ros-control
 sudo apt install ros-noetic-ros-controllers
 ```
+
+restart your terminal for sources to take effect
 <br>
 
 ---
