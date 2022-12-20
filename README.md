@@ -41,6 +41,10 @@ Clone repo and add source to .bashrc
 ```shell script
 cd ~
 git clone https://github.com/srrcanpolat/arm_project.git
+rm -r ~/arm_project/arm_ws/devel
+rm -r ~/arm_project/arm_ws/build
+cd ~/arm_project/arm_ws
+catkin_make
 echo "source ~/arm_project/arm_ws/devel/setup.bash" >> ~/.bashrc
 ```
 
