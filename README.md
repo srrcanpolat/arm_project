@@ -1,5 +1,5 @@
 # ROS Robot Arm Project (Work in Progress)
-This project is a work in progress and made for "Robotic Programming with ROS" course.
+This project is a work in progress and made for "Robot Programming with ROS" course.
 
 At the end of this project, it is aimed to control a robot arm simulated on Gazebo with a web interface.
 
