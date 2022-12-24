@@ -9,4 +9,5 @@
 # modified environment variables
 export LD_LIBRARY_PATH='/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu'
 export PKG_CONFIG_PATH='/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig'
-export PWD='/root/arm_project/arm_ws/build'
+export PWD='/home/scp/arm_project/arm_ws/build'
+export ROS_PACKAGE_PATH='/home/scp/arm_project/arm_ws/src:/opt/ros/noetic/share'
