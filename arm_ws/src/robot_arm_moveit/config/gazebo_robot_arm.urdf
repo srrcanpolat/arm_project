@@ -221,25 +221,25 @@
             </geometry>
         </collision>
     </link>
-    <link name="gripper_2">
-        <inertial>
-            <origin rpy="0 0 0" xyz="0.04 0.0 0.05" />
-            <mass value="0.0" />
-            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
-        </inertial>
-        <visual>
-            <origin rpy="0 0 0" xyz="0.04 0.0 0.05" />
-            <geometry>
-                <sphere radius="0.00" />
-            </geometry>
-        </visual>
-        <collision>
-            <origin rpy="0 0 0" xyz="0.04 0.0 0.05" />
-            <geometry>
-                <sphere radius="0.00" />
-            </geometry>
-        </collision>
-    </link>
+    <!--<link name="gripper_2">
+  <inertial>
+    <origin xyz="0.04 0.0 0.05" rpy="0 0 0"/>
+    <mass value="0.0"/>
+    <inertia ixx="0" iyy="0" izz="0" ixy="0" iyz="0" ixz="0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.04 0.0 0.05" rpy="0 0 0"/>
+    <geometry>
+      <sphere radius="0.00"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="0.04 0.0 0.05" rpy="0 0 0"/>
+    <geometry>
+      <sphere radius="0.00"/>
+    </geometry>
+  </collision>
+</link>-->
     <joint name="base_joint" type="revolute">
         <origin rpy="0 0 0" xyz="0.0 0.0 0.0566" />
         <parent link="base_link" />
@@ -280,11 +280,11 @@
         <child link="base_link" />
         <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
     </joint>
-    <joint name="fixed2" type="fixed">
-        <origin rpy="0 0 0" xyz="0.076264 0.005 0.093335" />
-        <parent link="gripper_1" />
-        <child link="gripper_2" />
-        <axis xyz="-0.0 -1.0 0.0" />
-    </joint>
+    <!--<joint name="fixed2" type="fixed">
+    <origin xyz="0.076264 0.005 0.093335" rpy="0 0 0"/>
+    <parent link="gripper_1"/>
+    <child link="gripper_2"/>
+    <axis xyz="-0.0 -1.0 0.0"/>
+</joint>-->
 </robot>
 

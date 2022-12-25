@@ -1,0 +1,8 @@
+prefix=/home/scp/arm_project/arm_ws/install
+
+Name: arm_planner
+Description: Description of arm_planner
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

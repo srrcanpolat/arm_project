@@ -126,7 +126,7 @@
   </collision>
 </link>
 
-<link name="gripper_2">
+<!--<link name="gripper_2">
   <inertial>
     <origin xyz="0.04 0.0 0.05" rpy="0 0 0"/>
     <mass value="0.0"/>
@@ -144,7 +144,7 @@
       <sphere radius="0.00"/>
     </geometry>
   </collision>
-</link>
+</link>-->
 
 <joint name="base_joint" type="revolute">
   <origin xyz="0.0 0.0 0.0566" rpy="0 0 0"/>
@@ -192,11 +192,11 @@
     <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
   </joint>
 
-  <joint name="fixed2" type="fixed">
+<!--<joint name="fixed2" type="fixed">
     <origin xyz="0.076264 0.005 0.093335" rpy="0 0 0"/>
     <parent link="gripper_1"/>
     <child link="gripper_2"/>
     <axis xyz="-0.0 -1.0 0.0"/>
-  </joint>
+</joint>-->
 
 </robot>

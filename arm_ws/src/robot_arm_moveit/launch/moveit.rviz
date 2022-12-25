@@ -5,6 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
+        - /MotionPlanning1/Planning Request1
       Splitter Ratio: 0.5
     Tree Height: 271
   - Class: rviz/Help
@@ -95,11 +96,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          gripper_2:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           waist_1:
             Alpha: 1
             Show Axes: false
@@ -180,11 +176,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          gripper_2:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           waist_1:
             Alpha: 1
             Show Axes: false
@@ -215,7 +206,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.012826681137085
+      Distance: 2
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -223,17 +214,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.75
       Focal Point:
-        X: 0.09619311988353729
-        Y: 0.20569339394569397
-        Z: 0.08046514540910721
+        X: -0.10000000149011612
+        Y: 0.25
+        Z: 0.30000001192092896
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.33500003814697266
+      Pitch: 0.5
       Target Frame: world
-      Yaw: 0.9767647981643677
+      Yaw: -0.6232355833053589
     Saved: ~
 Window Geometry:
   Displays:

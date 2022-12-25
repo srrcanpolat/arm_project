@@ -131,6 +131,8 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/scp/arm_project/arm_ws/build/gtest/cmake_install.cmake")
+  include("/home/scp/arm_project/arm_ws/build/robot_arm_moveit/cmake_install.cmake")
+  include("/home/scp/arm_project/arm_ws/build/arm_planner/cmake_install.cmake")
   include("/home/scp/arm_project/arm_ws/build/robot_arm_description/cmake_install.cmake")
 
 endif()
