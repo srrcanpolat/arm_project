@@ -1,2 +1,2 @@
 arm_planner:robot_arm_description:robot_arm_moveit
--DCATKIN_DEVEL_PREFIX=/home/scp/arm_project/arm_ws/devel -DCMAKE_INSTALL_PREFIX=/home/scp/arm_project/arm_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/root/arm_project/arm_ws/devel -DCMAKE_INSTALL_PREFIX=/root/arm_project/arm_ws/install -G Unix Makefiles

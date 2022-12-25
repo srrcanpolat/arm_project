@@ -15,9 +15,9 @@ rospy.init_node('move_group_py', anonymous=True)
 robot= moveit_commander.RobotCommander()
 scene = moveit_commander.PlanningSceneInterface()
 group = moveit_commander.MoveGroupCommander("arm")
-#oup.set_planner_id("RRTstarkConfigDefault")
+#group.set_planner_id("RRTstarkConfigDefault")
 
-q = quaternion_from_euler(0, -1.57, 0)
+#q = quaternion_from_euler(0, 0, 0)
 #print(q)
 #pose_goal = geometry_msgs.msg.Pose()
 #pose_goal.orientation.x=q[0]
@@ -35,21 +35,24 @@ q = quaternion_from_euler(0, -1.57, 0)
 #a.pose.position.x = 0.28
 #a.pose.position.z = 0.26
 #group.set_pose_target(a)
-
+print(group.get_current_pose())
 pose_goal = geometry_msgs.msg.PoseStamped()
 pose_goal.header.seq = group.get_current_pose().header.seq
 pose_goal.header.stamp = group.get_current_pose().header.stamp
 pose_goal.header.frame_id = group.get_current_pose().header.frame_id
-pose_goal.pose.position.x = 0.15
-pose_goal.pose.position.y = -0.08
-pose_goal.pose.position.z = 0.27
-pose_goal.pose.orientation.w = 0.9
+pose_goal.pose.position.x = 0.20
+pose_goal.pose.position.y = 0.052
+pose_goal.pose.position.z = 0.30
+#pose_goal.pose.orientation.x = q[0]
+#pose_goal.pose.orientation.y = q[1]
+#pose_goal.pose.orientation.z = q[2]
+pose_goal.pose.orientation.w = 1.0
 group.set_pose_target(pose_goal)
 
 
 plan1 = group.plan()
 
-#plan = group.go(wait=True)
+plan = group.go(wait=True)
 #group.stop()
 group.clear_pose_targets()
 
