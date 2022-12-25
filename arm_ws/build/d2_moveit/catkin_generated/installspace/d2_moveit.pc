@@ -1,0 +1,8 @@
+prefix=/home/scp/arm_project/arm_ws/install
+
+Name: d2_moveit
+Description: Description of d2_moveit
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

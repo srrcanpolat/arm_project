@@ -25,3 +25,7 @@ robot_arm:
     type: effort_controllers/JointPositionController
     joint: arm3_joint
     pid: {p: 0.5, i: 0.001, d: 0.05}
+  #end_eff_position_controller:
+  #  type: effort_controllers/JointPositionController
+  #  joint: end_eff
+  #  pid: {p: 0.5, i: 0.001, d: 0.05}  

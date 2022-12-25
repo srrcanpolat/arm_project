@@ -4,7 +4,7 @@
 <xacro:include filename="$(find robot_arm_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find robot_arm_description)/urdf/robot_arm.trans" />
 <xacro:include filename="$(find robot_arm_description)/urdf/robot_arm.gazebo" />
-<!--<link name="world"/>-->
+<link name="world"/>
 <link name="base_link">
   <inertial>
     <origin xyz="0.0024607011550564013 6.455733015215033e-10 0.0241964579063244" rpy="0 0 0"/>
@@ -128,18 +128,18 @@
 
 <link name="gripper_2">
   <inertial>
-    <origin xyz="0.04 0.0 0.05" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <mass value="0.0"/>
     <inertia ixx="0" iyy="0" izz="0" ixy="0" iyz="0" ixz="0"/>
   </inertial>
   <visual>
-    <origin xyz="0.04 0.0 0.05" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <geometry>
       <sphere radius="0.01"/>
     </geometry>
   </visual>
   <collision>
-    <origin xyz="0.04 0.0 0.05" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <geometry>
       <sphere radius="0.00"/>
     </geometry>
@@ -186,18 +186,19 @@
   <limit upper="1.570796" lower="-1.570796" effort="1.075" velocity="6"/>
 </joint>
 
-<!--<joint name="fixed" type="fixed">
+<joint name="fixed" type="fixed">
     <parent link="world"/>
     <child link="base_link"/>
     <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-  </joint>-->
+  </joint>
 
-<joint name="end_eff" type="revolute">
+<joint name="end_eff" type="fixed">
+    <!--<origin xyz="0.076264 -0.005 0.093335" rpy="0 0 0"/>-->
     <origin xyz="0.076264 0.005 0.093335" rpy="0 0 0"/>
     <parent link="gripper_1"/>
     <child link="gripper_2"/>
     <axis xyz="-0.0 -1.0 0.0"/>
-    <limit upper="1.570796" lower="-1.570796" effort="1.075" velocity="6"/>
+    <!--<limit upper="1.570796" lower="-1.570796" effort="1.075" velocity="6"/>-->
 </joint>
 
 </robot>

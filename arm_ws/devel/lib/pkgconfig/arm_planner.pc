@@ -1,4 +1,4 @@
-prefix=/root/arm_project/arm_ws/devel
+prefix=/home/scp/arm_project/arm_ws/devel
 
 Name: arm_planner
 Description: Description of arm_planner

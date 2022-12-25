@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/arm_project/arm_ws/src
+CMAKE_SOURCE_DIR = /home/scp/arm_project/arm_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/arm_project/arm_ws/build
+CMAKE_BINARY_DIR = /home/scp/arm_project/arm_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/arm_project/arm_ws/build/CMakeFiles /root/arm_project/arm_ws/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/scp/arm_project/arm_ws/build/CMakeFiles /home/scp/arm_project/arm_ws/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/arm_project/arm_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/scp/arm_project/arm_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -294,7 +294,7 @@ _catkin_empty_exported_target: cmake_check_build_system
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	$(MAKE) -f robot_arm_moveit/CMakeFiles/_catkin_empty_exported_target.dir/build.make robot_arm_moveit/CMakeFiles/_catkin_empty_exported_target.dir/build
+	$(MAKE) -f d2_moveit/CMakeFiles/_catkin_empty_exported_target.dir/build.make d2_moveit/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
