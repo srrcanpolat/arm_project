@@ -2,6 +2,6 @@
     <include file="$(find robot_arm_description)/launch/gazebo.launch"/>
     <include file="$(find robot_arm_description)/launch/controller.launch"/>
     <include file="$(find d2_moveit)/launch/demo.launch"/>
-
-
+    <!--<node name="node_plan" pkg="arm_planner" type="node_plan.py" args="" respawn="true"/>-->
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
 </launch>

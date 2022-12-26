@@ -8,7 +8,7 @@ robot_arm:
   base_joint_position_controller:
     type: effort_controllers/JointPositionController
     joint: base_joint
-    pid: {p: 10.0, i: 0.001, d: 0.6}
+    pid: {p: 20.0, i: 0.001, d: 0.6}
   waist_joint_position_controller:
     type: effort_controllers/JointPositionController
     joint: waist_joint

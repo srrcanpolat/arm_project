@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<script type="text/javascript" src="http://static.robotwebtools.org/EaselJS/current/easeljs.min.js"></script>
+<script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+<script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+<script type="text/javascript" src="http://static.robotwebtools.org/ros2djs/current/ros2d.min.js"></script>
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <h3>Robot Arm Control</h3>
+
+  <div class="container">
+    <h4>Recorded Poses</h4>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 180px;;">
+      <select class="mdl-textfield__input" name="recorded_poses" id="poses">
+        <option value="Home">Home</option>
+        <option value="Zero">Zero</option>
+        <option value="Front">Front</option>
+        <option value="Right">Right</option>
+        <option value="Left">Left</option>
+        <option value="LDiag">Left Diagonal</option>
+        <option value="RDiag">Right Diagonal</option>
+      </select>
+    </div>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="go_to_pose" type="button">Go To Pose</button>
+  </div>
+
+
+
+
+
+  <script type="text/javascript" src="scrpt.js"></script>
+</body>
+</html>

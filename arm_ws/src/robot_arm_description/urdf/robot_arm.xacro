@@ -151,7 +151,7 @@
   <parent link="base_link"/>
   <child link="waist_1"/>
   <axis xyz="-0.0 0.0 1.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="1.075" velocity="1000"/>
+  <limit upper="1.570796" lower="-1.570796" effort="15.075" velocity="2"/>
 </joint>
 
 <joint name="waist_joint" type="revolute">
@@ -159,7 +159,7 @@
   <parent link="waist_1"/>
   <child link="arm1_1"/>
   <axis xyz="0.0 -1.0 0.0"/>
-  <limit upper="1.570796" lower="-1.27409" effort="1.075" velocity="1000"/>
+  <limit upper="1.570796" lower="-1.27409" effort="15.075" velocity="2"/>
 </joint>
 
 <joint name="arm1_joint" type="revolute">
@@ -167,7 +167,7 @@
   <parent link="arm1_1"/>
   <child link="arm2_1"/>
   <axis xyz="-0.0 1.0 -0.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="1.075" velocity="1000"/>
+  <limit upper="1.570796" lower="-1.570796" effort="15.075" velocity="2"/>
 </joint>
 
 <joint name="arm2_joint" type="revolute">
@@ -175,7 +175,7 @@
   <parent link="arm2_1"/>
   <child link="arm3_1"/>
   <axis xyz="0.707107 0.0 0.707107"/>
-  <limit upper="1.570796" lower="-1.570796" effort="1.075" velocity="1000"/>
+  <limit upper="1.570796" lower="-1.570796" effort="15.075" velocity="2"/>
 </joint>
 
 <joint name="arm3_joint" type="revolute">
@@ -183,7 +183,7 @@
   <parent link="arm3_1"/>
   <child link="gripper_1"/>
   <axis xyz="-0.0 -1.0 0.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="1.075" velocity="1000"/>
+  <limit upper="1.570796" lower="-1.570796" effort="15.075" velocity="2"/>
 </joint>
 
 <joint name="fixed" type="fixed">
@@ -198,7 +198,7 @@
     <parent link="gripper_1"/>
     <child link="gripper_2"/>
     <axis xyz="-0.0 -1.0 0.0"/>
-    <limit upper="1.570796" lower="-1.570796" effort="1.075" velocity="1000"/>
+    <limit upper="1.570796" lower="-1.570796" effort="15.075" velocity="2"/>
 </joint>
 
 </robot>

@@ -33,44 +33,44 @@
         <joint name="waist_joint" value="0"/>
     </group_state>
     <group_state name="Left" group="arm">
-        <joint name="arm1_joint" value="1.4145"/>
+        <joint name="arm1_joint" value="1.198146621540113"/>
         <joint name="arm2_joint" value="0"/>
-        <joint name="arm3_joint" value="-1.0674"/>
+        <joint name="arm3_joint" value="-1.1803320916953932"/>
         <joint name="base_joint" value="1.5707"/>
         <joint name="end_eff" value="0"/>
-        <joint name="waist_joint" value="0.0462"/>
+        <joint name="waist_joint" value="0.01974269738694732"/>
     </group_state>
     <group_state name="Right" group="arm">
-        <joint name="arm1_joint" value="1.4145"/>
+        <joint name="arm1_joint" value="1.198146621540113"/>
         <joint name="arm2_joint" value="0"/>
-        <joint name="arm3_joint" value="-1.0674"/>
+        <joint name="arm3_joint" value="-1.1803320916953932"/>
         <joint name="base_joint" value="-1.5707"/>
         <joint name="end_eff" value="0"/>
-        <joint name="waist_joint" value="0.0462"/>
+        <joint name="waist_joint" value="0.01974269738694732"/>
     </group_state>
     <group_state name="RDiag" group="arm">
-        <joint name="arm1_joint" value="1.4145"/>
+        <joint name="arm1_joint" value="1.198146621540113"/>
         <joint name="arm2_joint" value="0"/>
-        <joint name="arm3_joint" value="-1.0674"/>
+        <joint name="arm3_joint" value="-1.1803320916953932"/>
         <joint name="base_joint" value="-0.7376"/>
         <joint name="end_eff" value="0"/>
-        <joint name="waist_joint" value="0.0462"/>
+        <joint name="waist_joint" value="0.01974269738694732"/>
     </group_state>
     <group_state name="LDiag" group="arm">
-        <joint name="arm1_joint" value="1.4145"/>
+        <joint name="arm1_joint" value="1.198146621540113"/>
         <joint name="arm2_joint" value="0"/>
-        <joint name="arm3_joint" value="-1.0674"/>
+        <joint name="arm3_joint" value="-1.1803320916953932"/>
         <joint name="base_joint" value="0.755"/>
         <joint name="end_eff" value="0"/>
-        <joint name="waist_joint" value="0.0462"/>
+        <joint name="waist_joint" value="0.01974269738694732"/>
     </group_state>
     <group_state name="Front" group="arm">
-        <joint name="arm1_joint" value="1.4145"/>
+        <joint name="arm1_joint" value="1.198146621540113"/>
         <joint name="arm2_joint" value="0"/>
-        <joint name="arm3_joint" value="-1.0674"/>
+        <joint name="arm3_joint" value="-1.1803320916953932"/>
         <joint name="base_joint" value="0"/>
         <joint name="end_eff" value="0"/>
-        <joint name="waist_joint" value="0.0462"/>
+        <joint name="waist_joint" value="0.01974269738694732"/>
     </group_state>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="FixedBase" type="fixed" parent_frame="world" child_link="world"/>
