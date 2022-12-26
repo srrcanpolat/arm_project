@@ -1,7 +1,10 @@
-controller_list:
-  - name: arm_controller
-    action_ns: follow_joint_trajectory
-    type: FollowJointTrajectory
+robot_arm:  
+  joint_state_controller:
+    type: "joint_state_controller/JointStateController"
+    publish_rate: 50
+
+  robot_arm_controller:
+    type: "effort_controllers/JointTrajectoryController"
     joints:
       - base_joint
       - waist_joint
@@ -9,6 +12,11 @@ controller_list:
       - arm2_joint
       - arm3_joint
       - end_eff
-initial:
-  - group: arm
-    pose: Home
+
+    gains:
+      base_joint: {p: 10.0, i: 0.001, d: 0.6}
+      waist_joint: {p: 10.0, i: 0.001, d: 0.5}
+      arm1_joint: {p: 5.0, i: 0.001, d: 0.3}
+      arm2_joint: {p: 0.5, i: 0.001, d: 0.04}
+      arm3_joint: {p: 0.5, i: 0.001, d: 0.05}
+      end_eff: {p: 0.5, i: 0.001, d: 0.05}

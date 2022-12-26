@@ -7,7 +7,6 @@ controller_list:
       - arm1_joint
       - arm2_joint
       - arm3_joint
-      - end_eff
 initial:  # Define initial robot poses per group
   - group: arm
     pose: Home
