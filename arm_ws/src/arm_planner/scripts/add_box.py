@@ -34,7 +34,7 @@ p.pose.position.z = -0.005
 scene.add_box("table",p,(1.5,1.5,0.01))
 
 
-group.set_position_target([0.15,0.1,0.03])
+group.set_named_target("Zero")
 
 
 plan = group.plan()

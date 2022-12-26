@@ -10,19 +10,19 @@ robot_arm:
     joint: base_joint
     pid: {p: 10.0, i: 0.001, d: 0.6}
   waist_joint_position_controller:
-    type: effort_controllers/JointTrajectoryController
+    type: effort_controllers/JointPositionController
     joint: waist_joint
     pid: {p: 10.0, i: 0.001, d: 0.5}
   arm1_joint_position_controller:
-    type: effort_controllers/JointTrajectoryController
+    type: effort_controllers/JointPositionController
     joint: arm1_joint
     pid: {p: 5.0, i: 0.001, d: 0.3}
   arm2_joint_position_controller:
-    type: effort_controllers/JointTrajectoryController
+    type: effort_controllers/JointPositionController
     joint: arm2_joint
     pid: {p: 0.5, i: 0.001, d: 0.04}
   arm3_joint_position_controller:
-    type: effort_controllers/JointTrajectoryController
+    type: effort_controllers/JointPositionController
     joint: arm3_joint
     pid: {p: 0.5, i: 0.001, d: 0.05}
   #end_eff_position_controller:

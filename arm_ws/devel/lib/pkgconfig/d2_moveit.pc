@@ -1,4 +1,4 @@
-prefix=/home/scp/arm_project/arm_ws/devel
+prefix=/root/arm_project/arm_ws/devel
 
 Name: d2_moveit
 Description: Description of d2_moveit

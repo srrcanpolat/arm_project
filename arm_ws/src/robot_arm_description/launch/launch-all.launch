@@ -1,6 +1,7 @@
 <launch>
     <include file="$(find robot_arm_description)/launch/gazebo.launch"/>
-    <include file="$(find d2_moveit)/launch/controller.launch.xml"/>
+    <include file="$(find robot_arm_description)/launch/controller.launch"/>
+    <include file="$(find d2_moveit)/launch/demo.launch"/>
 
 
 </launch>
