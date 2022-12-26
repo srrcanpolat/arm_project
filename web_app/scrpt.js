@@ -15,10 +15,41 @@ var nameTopic = new ROSLIB.Topic({
     messageType: 'std_msgs/String'
 });
 
-var tfTopic = new ROSLIB.Topic({
+
+var baseTopic = new ROSLIB.Topic({
     ros: ros,
-    name: '/tf',
-    messageType: 'tf2_msgs/TFMessage'
+    name: '/base_joint/joint_pos',
+    messageType: 'geometry_msgs/Vector3'
+});
+
+var waistTopic = new ROSLIB.Topic({
+    ros: ros,
+    name: '/waist_joint/joint_pos',
+    messageType: 'geometry_msgs/Vector3'
+});
+
+var arm1Topic = new ROSLIB.Topic({
+    ros: ros,
+    name: '/arm1_joint/joint_pos',
+    messageType: 'geometry_msgs/Vector3'
+});
+
+var arm2Topic = new ROSLIB.Topic({
+    ros: ros,
+    name: '/arm2_joint/joint_pos',
+    messageType: 'geometry_msgs/Vector3'
+});
+
+var arm3Topic = new ROSLIB.Topic({
+    ros: ros,
+    name: '/arm3_joint/joint_pos',
+    messageType: 'geometry_msgs/Vector3'
+});
+
+var gripperTopic = new ROSLIB.Topic({
+    ros: ros,
+    name: '/gripper/joint_pos',
+    messageType: 'geometry_msgs/Vector3'
 });
 
 function getRandomValue(min, max) {
@@ -36,38 +67,61 @@ function check(cx, cy, cz, x, y, z)
     let y1 = Math.pow((y - cy), 2);
     let z1 = Math.pow((z - cz), 2);
  
-    // distance between the centre
-    // and given point
     return (x1 + y1 + z1);
 }
 
 
-tfTopic.subscribe(function (message){
+baseTopic.subscribe(function (message){
     var mytable=document.getElementById("arm_table");
 
-    for(let i=0; i < 6 ; i++){
-    mytable.rows[1].cells[i+1].innerHTML = message.transforms[i].transform.translation.x;
-    mytable.rows[2].cells[i+1].innerHTML = message.transforms[i].transform.translation.y;
-    mytable.rows[3].cells[i+1].innerHTML = message.transforms[i].transform.translation.z;
-    
-    }
+    mytable.rows[1].cells[1].innerHTML = parseFloat(message.x).toFixed(5);
+    mytable.rows[2].cells[1].innerHTML = parseFloat(message.y).toFixed(5);
+    mytable.rows[3].cells[1].innerHTML = parseFloat(message.z).toFixed(5);
+});
 
-    //console.log(message.transforms)
-    //arm2 = 0
-    //arm3 = 1
-    //gripper_1=2
-    //waist = 3
-    //gripper_2 = 4
-    //arm1 = 5
-    //console.log(message.transforms[0].transform.translation);
-    //console.log(message.transforms[0].transform.translation.x);
+waistTopic.subscribe(function (message){
+    var mytable=document.getElementById("arm_table");
 
+    mytable.rows[1].cells[2].innerHTML = parseFloat(message.x).toFixed(5);
+    mytable.rows[2].cells[2].innerHTML = parseFloat(message.y).toFixed(5);
+    mytable.rows[3].cells[2].innerHTML = parseFloat(message.z).toFixed(5);
+});
+
+arm1Topic.subscribe(function (message){
+    var mytable=document.getElementById("arm_table");
+
+    mytable.rows[1].cells[3].innerHTML = parseFloat(message.x).toFixed(5);
+    mytable.rows[2].cells[3].innerHTML = parseFloat(message.y).toFixed(5);
+    mytable.rows[3].cells[3].innerHTML = parseFloat(message.z).toFixed(5);
+});
+
+arm2Topic.subscribe(function (message){
+    var mytable=document.getElementById("arm_table");
+
+    mytable.rows[1].cells[4].innerHTML = parseFloat(message.x).toFixed(5);
+    mytable.rows[2].cells[4].innerHTML = parseFloat(message.y).toFixed(5);
+    mytable.rows[3].cells[4].innerHTML = parseFloat(message.z).toFixed(5);
+});
+
+arm3Topic.subscribe(function (message){
+    var mytable=document.getElementById("arm_table");
+
+    mytable.rows[1].cells[5].innerHTML = parseFloat(message.x).toFixed(5);
+    mytable.rows[2].cells[5].innerHTML = parseFloat(message.y).toFixed(5);
+    mytable.rows[3].cells[5].innerHTML = parseFloat(message.z).toFixed(5);
+});
+
+gripperTopic.subscribe(function (message){
+    var mytable=document.getElementById("arm_table");
+
+    mytable.rows[1].cells[6].innerHTML = parseFloat(message.x).toFixed(5);
+    mytable.rows[2].cells[6].innerHTML = parseFloat(message.y).toFixed(5);
+    mytable.rows[3].cells[6].innerHTML = parseFloat(message.z).toFixed(5);
 });
 
 document.getElementById("go_to_pose").onclick = function() {
     var arm_pose = document.getElementById("poses").value;
     nameTopic.publish(new ROSLIB.Message({data: arm_pose}));
-    console.log(arm_pose);
 };
 
 document.getElementById("go_to_loc").onclick = function() {
@@ -81,11 +135,11 @@ document.getElementById("go_to_loc").onclick = function() {
     let ans = check(0,0,0.097,xValue,yValue,zValue);
 
     if (ans > (r2*r2) || ans < (r1*r1)  ){
-        console.log("invalid");
+        //console.log("invalid");
         document.getElementById("validity").innerHTML = "invalid";
     }
     else{
-        console.log("valid");
+        //console.log("valid");
         posTopic.publish(new ROSLIB.Message({x: xValue,y: yValue,z: zValue}));
         document.getElementById("validity").innerHTML = "valid";
     }
