@@ -1,4 +1,4 @@
-prefix=/home/davlsr/arm_project/arm_ws/install
+prefix=/root/arm_project/arm_ws/install
 
 Name: d2_moveit
 Description: Description of d2_moveit

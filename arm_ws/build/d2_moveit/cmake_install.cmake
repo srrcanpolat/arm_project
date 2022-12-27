@@ -1,8 +1,8 @@
-# Install script for directory: /home/davlsr/arm_project/arm_ws/src/d2_moveit
+# Install script for directory: /root/arm_project/arm_ws/src/d2_moveit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/davlsr/arm_project/arm_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/root/arm_project/arm_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/davlsr/arm_project/arm_ws/build/d2_moveit/catkin_generated/installspace/d2_moveit.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/root/arm_project/arm_ws/build/d2_moveit/catkin_generated/installspace/d2_moveit.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/d2_moveit/cmake" TYPE FILE FILES
-    "/home/davlsr/arm_project/arm_ws/build/d2_moveit/catkin_generated/installspace/d2_moveitConfig.cmake"
-    "/home/davlsr/arm_project/arm_ws/build/d2_moveit/catkin_generated/installspace/d2_moveitConfig-version.cmake"
+    "/root/arm_project/arm_ws/build/d2_moveit/catkin_generated/installspace/d2_moveitConfig.cmake"
+    "/root/arm_project/arm_ws/build/d2_moveit/catkin_generated/installspace/d2_moveitConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/d2_moveit" TYPE FILE FILES "/home/davlsr/arm_project/arm_ws/src/d2_moveit/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/d2_moveit" TYPE FILE FILES "/root/arm_project/arm_ws/src/d2_moveit/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/d2_moveit" TYPE DIRECTORY FILES "/home/davlsr/arm_project/arm_ws/src/d2_moveit/launch" REGEX "/setup\\_assistant\\.launch$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/d2_moveit" TYPE DIRECTORY FILES "/root/arm_project/arm_ws/src/d2_moveit/launch" REGEX "/setup\\_assistant\\.launch$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/d2_moveit" TYPE DIRECTORY FILES "/home/davlsr/arm_project/arm_ws/src/d2_moveit/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/d2_moveit" TYPE DIRECTORY FILES "/root/arm_project/arm_ws/src/d2_moveit/config")
 endif()
 

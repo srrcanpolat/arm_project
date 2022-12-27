@@ -1,7 +1,9 @@
 window.onload = function(){ 
 
-var xlist = [0,0.1,0.2,0.3,0.4,0.5,0.6];
-var ylist = [0,0.1,0.2,0.3,0.4,0.5,0.6];
+var graphDiv = document.getElementById("arm_plot");
+    
+var xlist = [0,0,0,0,0,0,0];
+var ylist = [0,0,0,0,0,0,0];
 var zlist = [0,0.1,0.2,0.3,0.4,0.5,0.6];
 var clist = [0,0.1,0.2,0.3,0.4,0.5,0.6];
 
@@ -174,6 +176,7 @@ gripperTopic.subscribe(function (message){
     xlist[6]=x;
     ylist[6]=y;
     zlist[6]=z;
+
 });
 
 JointStateTopic.subscribe(function (message){
@@ -214,10 +217,7 @@ document.getElementById("go_to_loc").onclick = function() {
     
 };
 
-
-
-
-Plotly.newPlot('arm_plot', [{
+var data = [{
     type: 'scatter3d',
     mode: 'lines+markers',
     x: xlist,
@@ -233,8 +233,44 @@ Plotly.newPlot('arm_plot', [{
       colorscale: "Greens",
       cmin: -20,
       cmax: 50
-    }},                  
-  ]);
+    }}                 
+  ];
 
+  var layout = {
+    scene:{
+    
+     aspectmode: "manual",
+     aspectratio: {
+       x: 1, y: 1.8, z: 1,
+      },
+     xaxis: {
+      nticks: 2,
+      range: [-0.15, 0.37],
+    },
+     yaxis: {
+      nticks: 2,
+      range: [-0.4, 0.37],
+    },
+     zaxis: {
+     nticks: 2,
+     range: [0, 0.421],
+    }},
+  };
+
+
+Plotly.newPlot('arm_plot', data, layout);
+
+
+  setInterval(function () {
+    var update ={
+        x: [xlist],
+        y: [ylist],
+        z: [zlist]
+    }
+
+    Plotly.restyle(graphDiv,update);
+
+}, 50);
+  
 
 }

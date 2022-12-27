@@ -1,8 +1,8 @@
-# Install script for directory: /home/davlsr/arm_project/arm_ws/src/arm_planner
+# Install script for directory: /root/arm_project/arm_ws/src/arm_planner
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/davlsr/arm_project/arm_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/root/arm_project/arm_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/davlsr/arm_project/arm_ws/build/arm_planner/catkin_generated/installspace/arm_planner.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/root/arm_project/arm_ws/build/arm_planner/catkin_generated/installspace/arm_planner.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_planner/cmake" TYPE FILE FILES
-    "/home/davlsr/arm_project/arm_ws/build/arm_planner/catkin_generated/installspace/arm_plannerConfig.cmake"
-    "/home/davlsr/arm_project/arm_ws/build/arm_planner/catkin_generated/installspace/arm_plannerConfig-version.cmake"
+    "/root/arm_project/arm_ws/build/arm_planner/catkin_generated/installspace/arm_plannerConfig.cmake"
+    "/root/arm_project/arm_ws/build/arm_planner/catkin_generated/installspace/arm_plannerConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_planner" TYPE FILE FILES "/home/davlsr/arm_project/arm_ws/src/arm_planner/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_planner" TYPE FILE FILES "/root/arm_project/arm_ws/src/arm_planner/package.xml")
 endif()
 
