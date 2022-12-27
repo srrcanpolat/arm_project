@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/scp/arm_project/arm_ws/src
+CMAKE_SOURCE_DIR = /home/davlsr/arm_project/arm_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/scp/arm_project/arm_ws/build
+CMAKE_BINARY_DIR = /home/davlsr/arm_project/arm_ws/build
 
 # Utility rule file for run_tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/run_tests.dir/clean:
 .PHONY : CMakeFiles/run_tests.dir/clean
 
 CMakeFiles/run_tests.dir/depend:
-	cd /home/scp/arm_project/arm_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/scp/arm_project/arm_ws/src /home/scp/arm_project/arm_ws/src /home/scp/arm_project/arm_ws/build /home/scp/arm_project/arm_ws/build /home/scp/arm_project/arm_ws/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/davlsr/arm_project/arm_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/davlsr/arm_project/arm_ws/src /home/davlsr/arm_project/arm_ws/src /home/davlsr/arm_project/arm_ws/build /home/davlsr/arm_project/arm_ws/build /home/davlsr/arm_project/arm_ws/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/run_tests.dir/depend
 
