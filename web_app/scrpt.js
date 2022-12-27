@@ -1,4 +1,11 @@
 window.onload = function(){ 
+
+var xlist = [0,0.1,0.2,0.3,0.4,0.5,0.6];
+var ylist = [0,0.1,0.2,0.3,0.4,0.5,0.6];
+var zlist = [0,0.1,0.2,0.3,0.4,0.5,0.6];
+var clist = [0,0.1,0.2,0.3,0.4,0.5,0.6];
+
+
 var ros = new ROSLIB.Ros({
     url : 'ws://localhost:9090'
 });
@@ -52,6 +59,12 @@ var gripperTopic = new ROSLIB.Topic({
     messageType: 'geometry_msgs/Vector3'
 });
 
+var JointStateTopic = new ROSLIB.Topic({
+    ros: ros,
+    name: '/joint_states',
+    messageType: 'sensor_msgs/JointState'
+});
+
 function getRandomValue(min, max) {
     return Math.random() * (max - min) + min;
 }
@@ -70,53 +83,107 @@ function check(cx, cy, cz, x, y, z)
     return (x1 + y1 + z1);
 }
 
+var mytable=document.getElementById("arm_table");
 
 baseTopic.subscribe(function (message){
-    var mytable=document.getElementById("arm_table");
 
-    mytable.rows[1].cells[1].innerHTML = parseFloat(message.x).toFixed(5);
-    mytable.rows[2].cells[1].innerHTML = parseFloat(message.y).toFixed(5);
-    mytable.rows[3].cells[1].innerHTML = parseFloat(message.z).toFixed(5);
+    let x = parseFloat(message.x).toFixed(5);
+    let y = parseFloat(message.y).toFixed(5);
+    let z = parseFloat(message.z).toFixed(5);
+
+    mytable.rows[1].cells[1].innerHTML = x;
+    mytable.rows[2].cells[1].innerHTML = y;
+    mytable.rows[3].cells[1].innerHTML = z;
+
+    xlist[1]=x;
+    ylist[1]=y;
+    zlist[1]=z;
+
 });
 
 waistTopic.subscribe(function (message){
-    var mytable=document.getElementById("arm_table");
 
-    mytable.rows[1].cells[2].innerHTML = parseFloat(message.x).toFixed(5);
-    mytable.rows[2].cells[2].innerHTML = parseFloat(message.y).toFixed(5);
-    mytable.rows[3].cells[2].innerHTML = parseFloat(message.z).toFixed(5);
+    let x = parseFloat(message.x).toFixed(5);
+    let y = parseFloat(message.y).toFixed(5);
+    let z = parseFloat(message.z).toFixed(5);
+
+    mytable.rows[1].cells[2].innerHTML = x;
+    mytable.rows[2].cells[2].innerHTML = y;
+    mytable.rows[3].cells[2].innerHTML = z;
+
+    xlist[2]=x;
+    ylist[2]=y;
+    zlist[2]=z;
 });
 
 arm1Topic.subscribe(function (message){
-    var mytable=document.getElementById("arm_table");
 
-    mytable.rows[1].cells[3].innerHTML = parseFloat(message.x).toFixed(5);
-    mytable.rows[2].cells[3].innerHTML = parseFloat(message.y).toFixed(5);
-    mytable.rows[3].cells[3].innerHTML = parseFloat(message.z).toFixed(5);
+    let x = parseFloat(message.x).toFixed(5);
+    let y = parseFloat(message.y).toFixed(5);
+    let z = parseFloat(message.z).toFixed(5);
+
+    mytable.rows[1].cells[3].innerHTML = x;
+    mytable.rows[2].cells[3].innerHTML = y;
+    mytable.rows[3].cells[3].innerHTML = z;
+
+    xlist[3]=x;
+    ylist[3]=y;
+    zlist[3]=z;
 });
 
 arm2Topic.subscribe(function (message){
-    var mytable=document.getElementById("arm_table");
 
-    mytable.rows[1].cells[4].innerHTML = parseFloat(message.x).toFixed(5);
-    mytable.rows[2].cells[4].innerHTML = parseFloat(message.y).toFixed(5);
-    mytable.rows[3].cells[4].innerHTML = parseFloat(message.z).toFixed(5);
+    let x = parseFloat(message.x).toFixed(5);
+    let y = parseFloat(message.y).toFixed(5);
+    let z = parseFloat(message.z).toFixed(5);
+
+    mytable.rows[1].cells[4].innerHTML = x;
+    mytable.rows[2].cells[4].innerHTML = y;
+    mytable.rows[3].cells[4].innerHTML = z;
+
+    xlist[4]=x;
+    ylist[4]=y;
+    zlist[4]=z;
 });
 
 arm3Topic.subscribe(function (message){
-    var mytable=document.getElementById("arm_table");
 
-    mytable.rows[1].cells[5].innerHTML = parseFloat(message.x).toFixed(5);
-    mytable.rows[2].cells[5].innerHTML = parseFloat(message.y).toFixed(5);
-    mytable.rows[3].cells[5].innerHTML = parseFloat(message.z).toFixed(5);
+    let x = parseFloat(message.x).toFixed(5);
+    let y = parseFloat(message.y).toFixed(5);
+    let z = parseFloat(message.z).toFixed(5);
+
+    mytable.rows[1].cells[5].innerHTML = x;
+    mytable.rows[2].cells[5].innerHTML = y;
+    mytable.rows[3].cells[5].innerHTML = z;
+
+    xlist[5]=x;
+    ylist[5]=y;
+    zlist[5]=z;
 });
 
 gripperTopic.subscribe(function (message){
-    var mytable=document.getElementById("arm_table");
 
-    mytable.rows[1].cells[6].innerHTML = parseFloat(message.x).toFixed(5);
-    mytable.rows[2].cells[6].innerHTML = parseFloat(message.y).toFixed(5);
-    mytable.rows[3].cells[6].innerHTML = parseFloat(message.z).toFixed(5);
+    let x = parseFloat(message.x).toFixed(5);
+    let y = parseFloat(message.y).toFixed(5);
+    let z = parseFloat(message.z).toFixed(5);
+
+    mytable.rows[1].cells[6].innerHTML = x;
+    mytable.rows[2].cells[6].innerHTML = y;
+    mytable.rows[3].cells[6].innerHTML = z;
+
+    xlist[6]=x;
+    ylist[6]=y;
+    zlist[6]=z;
+});
+
+JointStateTopic.subscribe(function (message){
+    mytable.rows[4].cells[1].innerHTML = parseFloat(message.position[0]).toFixed(5);
+    mytable.rows[4].cells[2].innerHTML = parseFloat(message.position[1]).toFixed(5);
+    mytable.rows[4].cells[3].innerHTML = parseFloat(message.position[2]).toFixed(5);
+    mytable.rows[4].cells[4].innerHTML = parseFloat(message.position[3]).toFixed(5);
+    mytable.rows[4].cells[5].innerHTML = parseFloat(message.position[4]).toFixed(5);
+    mytable.rows[4].cells[6].innerHTML = parseFloat(message.position[5]).toFixed(5);
+
 });
 
 document.getElementById("go_to_pose").onclick = function() {
@@ -146,4 +213,28 @@ document.getElementById("go_to_loc").onclick = function() {
 
     
 };
+
+
+
+
+Plotly.newPlot('arm_plot', [{
+    type: 'scatter3d',
+    mode: 'lines+markers',
+    x: xlist,
+    y: ylist,
+    z: zlist,
+    line: {
+      width: 6,
+      color: clist,
+      colorscale: "Viridis"},
+    marker: {
+      size: 3.5,
+      color: clist,
+      colorscale: "Greens",
+      cmin: -20,
+      cmax: 50
+    }},                  
+  ]);
+
+
 }

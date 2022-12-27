@@ -1,4 +1,4 @@
-prefix=/root/arm_project/arm_ws/devel
+prefix=/home/davlsr/arm_project/arm_ws/devel
 
 Name: robot_arm_description
 Description: Description of robot_arm_description

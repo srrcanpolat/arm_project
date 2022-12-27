@@ -5,4 +5,5 @@
     <node name="node_plan" pkg="arm_planner" type="node_plan.py" args="" respawn="true"/>
     <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
     <node name="get_joint_position" pkg="arm_planner" type="position.py" args="" respawn="true"/>
+    <node name="set_joint_state" pkg="arm_planner" type="custom_joint_state.py" args="" respawn="true"/>
 </launch>

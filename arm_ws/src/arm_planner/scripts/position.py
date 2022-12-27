@@ -17,7 +17,7 @@ if __name__ == '__main__':
     arm3_pos = rospy.Publisher('arm3_joint/joint_pos', geometry_msgs.msg.Vector3, queue_size=1)
     gripper_pos = rospy.Publisher('gripper/joint_pos', geometry_msgs.msg.Vector3, queue_size=1)
 
-    rate = rospy.Rate(0.5)
+    rate = rospy.Rate(5)
     while not rospy.is_shutdown():
         try:
             trans1 = tfBuffer.lookup_transform('world', "waist_1", rospy.Time(0))

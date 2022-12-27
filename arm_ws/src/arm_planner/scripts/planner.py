@@ -46,14 +46,14 @@ if(plan):
     group.go(wait=True)
 
     #dne= group.get_current_joint_values()
-    plan = group.plan()
-    dne = plan[1].joint_trajectory.points[1].positions
+    #plan = group.plan()
+    #dne = plan[1].joint_trajectory.points[1].positions
 
-    pub1.publish(dne[0])
-    pub2.publish(dne[1])
-    pub3.publish(dne[2])
-    pub4.publish(dne[3])
-    pub5.publish(dne[4])
+    #pub1.publish(dne[0])
+    #pub2.publish(dne[1])
+    #pub3.publish(dne[2])
+    #pub4.publish(dne[3])
+    #pub5.publish(dne[4])
 else:
     print("fail")
 

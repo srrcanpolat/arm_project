@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/arm_project/arm_ws/src
+CMAKE_SOURCE_DIR = /home/davlsr/arm_project/arm_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/arm_project/arm_ws/build
+CMAKE_BINARY_DIR = /home/davlsr/arm_project/arm_ws/build
 
 # Utility rule file for geometry_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ arm_planner/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build: geometr
 .PHONY : arm_planner/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 
 arm_planner/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
-	cd /root/arm_project/arm_ws/build/arm_planner && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/davlsr/arm_project/arm_ws/build/arm_planner && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : arm_planner/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
 
 arm_planner/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend:
-	cd /root/arm_project/arm_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/arm_project/arm_ws/src /root/arm_project/arm_ws/src/arm_planner /root/arm_project/arm_ws/build /root/arm_project/arm_ws/build/arm_planner /root/arm_project/arm_ws/build/arm_planner/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/davlsr/arm_project/arm_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/davlsr/arm_project/arm_ws/src /home/davlsr/arm_project/arm_ws/src/arm_planner /home/davlsr/arm_project/arm_ws/build /home/davlsr/arm_project/arm_ws/build/arm_planner /home/davlsr/arm_project/arm_ws/build/arm_planner/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : arm_planner/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
 
