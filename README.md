@@ -10,14 +10,18 @@ At the end of this project, it is aimed to control a robot arm simulated on Gaze
 - Loaded the URDF file to RViz without any error.
 - Loaded the URDF file to Gazebo without any error.
 - Tested the joint controls on Gazebo using ROS commands on terminal.
+- Set up MoveIt[^3]
+- Develop a web interface and connect to ROS using roslibjs[^4] and rosbridge[^5].
+- Control the robot through web interface.
 
 ### What to do next:
-- Set up MoveIt[^3] and control the robot arm through it.
-- Develop a web interface and connect to ROS using roslibjs[^4] and rosbridge[^5].
+- <s style="color: darkgrey">Set up MoveIt and control the robot arm through it.
+- Develop a web interface and connect to ROS using roslibjs and rosbridge.</s>
+- Since the project goal has been reached, I will continue working on it in my spare time as a personal project.
 
 ## Installation Steps
 
-Operating system: Ubuntu 20.04
+Operating system: Ubuntu 20.04 Focal Fossa
 
 Install ROS Noetic
 
@@ -54,58 +58,51 @@ sudo apt install ros-noetic-ros-control
 sudo apt install ros-noetic-ros-controllers
 ```
 
+Install MoveIt
+```shell script
+sudo apt install ros-noetic-moveit
+```
+
+Install Rosbridge
+```shell script
+sudo apt-get install ros-noetic-rosbridge-server
+```
+<br>
 restart your terminal for sources to take effect
 <br>
 
----
+## Simulation
 
-<br>
+To start to simulation run
 
-For loading URDF to RViz
 ```shell script
-roslaunch robot_arm_description display.launch
-```
-<br>
-
----
-
-<br><br>
-For loading URDF to Gazebo and control the arm joints
-
-Start the gazebo with paused time
-```shell script
-roslaunch robot_arm_description gazebo.launch
+roslaunch robot_arm_description launch-all.launch
 ```
 
-in second terminal enter
+To start to a http server
+
 ```shell script
-roslaunch robot_arm_description controller.launch
+cd ~/arm_project/web_app
+python3 -m http.server
 ```
-and start the gazebo time to make connections with controller.
-
-<br>
-
-For controlling the joints in third terminal
-```shell script
-rostopic pub -1 /robot_arm/waist_joint_position_controller/command std_msgs/Float64 "data: 1.0"
+and connect to the server by going to below url in your browser
+```
+http://localhost:8000/
 ```
 
-"data" is angles in radians.
+You should see a Gazebo window and a web page. Screenshots given below.
 
-To get all joint topics
-```shell script
-rostopic list
-```
----
+Gazebo
 
-### Joint Limits:
-| Joints        | Upper Limit   | Lower Limit  |
-| ------------- |:-------------:| :-----------:|
-| base_joint    | 1.57			| -1.57 	   |
-| waist_joint   | 1.57			| -1.27 	   |
-| arm1_joint    | 1.57			| -1.57 	   |
-| arm2_joint    | 1.57			| -1.57 	   |
-| arm3_joint    | 1.57			| -1.57 	   |
+![alt text](https://github.com/srrcanpolat/arm_project/tree/main/imgs/gazebo.jpg "Gazebo Window")
+
+Web page
+
+![alt text](https://github.com/srrcanpolat/arm_project/tree/main/imgs/web-page.jpg "Web Page")
+
+Using the web page you can control the arm in gazebo.
+
+
 
 ### References
 
