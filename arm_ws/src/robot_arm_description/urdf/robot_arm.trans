@@ -56,4 +56,15 @@
   </actuator>
 </transmission>
 
+<!--<transmission name="end_eff_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="end_eff">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="end_eff_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>-->
+
 </robot>
