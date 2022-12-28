@@ -45,8 +45,6 @@ Clone repo and add source to .bashrc
 ```shell script
 cd ~
 git clone https://github.com/srrcanpolat/arm_project.git
-rm -r ~/arm_project/arm_ws/devel
-rm -r ~/arm_project/arm_ws/build
 cd ~/arm_project/arm_ws
 catkin_make
 echo "source ~/arm_project/arm_ws/devel/setup.bash" >> ~/.bashrc
@@ -94,11 +92,11 @@ You should see a Gazebo window and a web page. Screenshots given below.
 
 Gazebo
 
-![alt text](https://github.com/srrcanpolat/arm_project/tree/main/imgs/gazebo.jpg "Gazebo Window")
+![Gazebo]https://github.com/srrcanpolat/arm_project/blob/main/imgs/gazebo.jpg "Gazebo Window")
 
 Web page
 
-![alt text](https://github.com/srrcanpolat/arm_project/tree/main/imgs/web-page.jpg "Web Page")
+![Web Page](https://github.com/srrcanpolat/arm_project/blob/main/imgs/web-page.jpg "Web Page")
 
 Using the web page you can control the arm in gazebo.
 
