@@ -48,6 +48,7 @@ git clone https://github.com/srrcanpolat/arm_project.git
 cd ~/arm_project/arm_ws
 catkin_make
 echo "source ~/arm_project/arm_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
 ```
 
 Install ros control
@@ -65,9 +66,6 @@ Install Rosbridge
 ```shell script
 sudo apt-get install ros-noetic-rosbridge-server
 ```
-<br>
-restart your terminal for sources to take effect
-<br>
 
 ## Simulation
 
