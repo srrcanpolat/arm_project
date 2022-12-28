@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/arm_project/arm_ws/src
+CMAKE_SOURCE_DIR = /home/davlsr/arm_project/arm_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/arm_project/arm_ws/build
+CMAKE_BINARY_DIR = /home/davlsr/arm_project/arm_ws/build
 
 # Utility rule file for std_msgs_generate_messages_py.
 
@@ -63,10 +63,10 @@ arm_planner/CMakeFiles/std_msgs_generate_messages_py.dir/build: std_msgs_generat
 .PHONY : arm_planner/CMakeFiles/std_msgs_generate_messages_py.dir/build
 
 arm_planner/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
-	cd /root/arm_project/arm_ws/build/arm_planner && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/davlsr/arm_project/arm_ws/build/arm_planner && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : arm_planner/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 
 arm_planner/CMakeFiles/std_msgs_generate_messages_py.dir/depend:
-	cd /root/arm_project/arm_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/arm_project/arm_ws/src /root/arm_project/arm_ws/src/arm_planner /root/arm_project/arm_ws/build /root/arm_project/arm_ws/build/arm_planner /root/arm_project/arm_ws/build/arm_planner/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/davlsr/arm_project/arm_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/davlsr/arm_project/arm_ws/src /home/davlsr/arm_project/arm_ws/src/arm_planner /home/davlsr/arm_project/arm_ws/build /home/davlsr/arm_project/arm_ws/build/arm_planner /home/davlsr/arm_project/arm_ws/build/arm_planner/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : arm_planner/CMakeFiles/std_msgs_generate_messages_py.dir/depend
 
