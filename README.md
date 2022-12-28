@@ -92,7 +92,7 @@ You should see a Gazebo window and a web page. Screenshots given below.
 
 Gazebo
 
-![Gazebo]https://github.com/srrcanpolat/arm_project/blob/main/imgs/gazebo.jpg "Gazebo Window")
+![Gazebo](https://github.com/srrcanpolat/arm_project/blob/main/imgs/gazebo.jpg "Gazebo Window")
 
 Web page
 
