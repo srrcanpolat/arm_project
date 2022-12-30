@@ -69,13 +69,13 @@ sudo apt-get install ros-noetic-rosbridge-server
 
 ## Simulation
 
-To start to simulation run
+To start the simulation run
 
 ```shell script
 roslaunch robot_arm_description launch-all.launch
 ```
 
-To start to a http server
+To start a http server
 
 ```shell script
 cd ~/arm_project/web_app
