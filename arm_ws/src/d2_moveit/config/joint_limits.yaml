@@ -14,25 +14,25 @@ joint_limits:
   arm1_joint:
     has_velocity_limits: true
     max_velocity: 1000
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 500
   arm2_joint:
     has_velocity_limits: true
     max_velocity: 1000
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 500
   arm3_joint:
     has_velocity_limits: true
     max_velocity: 1000
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 500
   base_joint:
     has_velocity_limits: true
     max_velocity: 1000
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 500
   waist_joint:
     has_velocity_limits: true
     max_velocity: 1000
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 500
