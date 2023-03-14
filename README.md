@@ -1,5 +1,5 @@
-# ROS Robot Arm Project (Work in Progress)
-This project is a work in progress and made for "Robot Programming with ROS" course.
+# ROS Robot Arm Project
+This project is made for "Robot Programming with ROS" course.
 
 At the end of this project, it is aimed to control a robot arm simulated on Gazebo with a web interface.
 
@@ -48,6 +48,7 @@ git clone https://github.com/srrcanpolat/arm_project.git
 cd ~/arm_project/arm_ws
 catkin_make
 echo "source ~/arm_project/arm_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
 ```
 
 Install ros control
@@ -65,19 +66,16 @@ Install Rosbridge
 ```shell script
 sudo apt-get install ros-noetic-rosbridge-server
 ```
-<br>
-restart your terminal for sources to take effect
-<br>
 
 ## Simulation
 
-To start to simulation run
+To start the simulation run
 
 ```shell script
 roslaunch robot_arm_description launch-all.launch
 ```
 
-To start to a http server
+To start a http server
 
 ```shell script
 cd ~/arm_project/web_app
